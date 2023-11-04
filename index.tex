@@ -1,0 +1,101 @@
+\documentclass[12pt]{article}
+
+\usepackage{sbc-template}
+
+\usepackage{graphicx,url}
+
+%\usepackage[brazil]{babel}
+\usepackage[utf8]{inputenc}
+
+
+\sloppy
+
+\title{Algoritmos de Ordenação: \\ Bubble Sort, Merge Sort, Insert Sort e Quick Sort}
+
+\author{Kauã da Silva Nunes, Matheus Henrique Reich }
+
+
+\address{Pontifícia Universidade Católica do Paraná (PUCPR)}
+
+\begin{document}
+
+    \maketitle
+
+    \section{Bubble Sort} \label{sec:firstpage}
+
+    O Bubble Sort é um algoritmo de ordenação que funciona comparando pares de elementos adjacentes em uma lista e trocando suas posições se estiverem fora de ordem. Este processo é repetido até que a lista esteja completamente ordenada. É um algoritmo simples, mas não é muito eficiente para listas grandes.
+
+    \begin{tabular}{ |p{3cm}||p{3cm}|p{3cm}|p{3cm}|  }
+        \hline
+        \multicolumn{4}{|c|}{Bubble Sort - Análise} \\
+        \hline
+        Tamanho do Vetor & Tempo de execução(ns) &Número de trocas & Número de iterações\\
+        \hline
+        50&66069&613&49\\
+        500&20361826&63295&499\\
+        1000&41059790&252738&999\\
+        5000&320195031&6224627&4999\\
+        10000&1141913765&24909411&9999\\
+        \hline
+    \end{tabular}
+
+    \section{Merge Sort}
+
+    O Merge Sort é um algoritmo de ordenação que utiliza a abordagem de dividir para conquistar. Ele divide a lista em duas metades, ordena cada uma delas e depois as combina.
+    \begin{enumerate}
+        \item Dividir: O algoritmo divide a lista ao meio até que cada sublista contenha apenas um elemento.
+        \item Conquistar: Ordena recursivamente as duas metades.
+        \item Combinar: Mescla (merge) as duas metades ordenadas para produzir a lista ordenada final.
+    \end{enumerate}
+
+    O Merge Sort é eficiente e tem uma complexidade de tempo de \(0(nlogn)\), mas pode ter um alto consumo de memória, pois cria novas listas durante a ordenação.
+    \begin{tabular}{ |p{3cm}||p{3cm}|p{3cm}|p{3cm}|  }
+        \hline
+        \multicolumn{4}{|c|}{Merge Sort - Análise} \\
+        \hline
+        Tamanho do Vetor & Tempo de execução(ns) &Número de trocas & Número de iterações\\
+        \hline
+        50&49914&286&384\\
+        500&17780406&4488&5486\\
+        1000&418672&9976&11974\\
+        5000&2367307&61808&71806\\
+        10000&19504545&133616&153614\\
+        \hline
+    \end{tabular}
+
+    \section{Insert Sort}
+
+    O Insertion Sort é um algoritmo de ordenação que percorre cada elemento da lista, compara com os elementos anteriores e os insere na posição correta. É eficiente para listas pequenas ou parcialmente ordenadas, mas não é ideal para listas grandes. Ele só precisa de uma pequena quantidade de memória adicional para funcionar.
+
+    \begin{tabular}{ |p{3cm}||p{3cm}|p{3cm}|p{3cm}|  }
+        \hline
+        \multicolumn{4}{|c|}{Insertion Sort - Análise} \\
+        \hline
+        Tamanho do Vetor & Tempo de execução(ns) &Número de trocas & Número de iterações\\
+        \hline
+        50&32094&49&49\\
+        500&1957325&499&499\\
+        1000&338036&999&999\\
+        5000&58022692&4999&4999\\
+        10000&161529787&9999&9999\\
+        \hline
+    \end{tabular}
+
+    \section{Quick Sort}
+    O Quicksort é um algoritmo de ordenação eficiente que funciona escolhendo um pivô em uma lista, reorganizando a lista de forma que os elementos menores fiquem antes do pivô e os maiores depois, e então aplicando o mesmo processo nas sublistas de elementos menores e maiores. Isso é feito recursivamente até que a lista esteja ordenada.
+
+    \begin{tabular}{ |p{3cm}||p{3cm}|p{3cm}|p{3cm}|  }
+        \hline
+        \multicolumn{4}{|c|}{Quick Sort - Análise} \\
+        \hline
+        Tamanho do Vetor & Tempo de execução(ns) &Número de trocas & Número de iterações\\
+        \hline
+        50&55115&151&247\\
+        500&303184&2638&4824\\
+        1000&194681&6043&10752\\
+        5000&759343&37303&69032\\
+        10000&18332816&83739&152475\\
+        \hline
+    \end{tabular}
+
+\end{document}
